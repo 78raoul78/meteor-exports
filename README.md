@@ -21,15 +21,14 @@ You can add others accounts [here](./server/main.js) in the accounts array
 - show/hide completed exports by clicking on the button **show all/hide completed**
 - delete any export by clicking on the delete icon present on the same line
 
-The export progresses by 5% every second, but you can adjust these settings [here](./imports/api/exportsMethods.js)
-Once the export reaches 100%, it displays an url randomly picked amount the elements declared here [here](./imports/api/exportsMethods.js) in the urls array
+The export progresses by 5% every second, but you can adjust these settings [here](./imports/api/exportsMethods.js)  
+Once the export reaches 100%, it displays an url randomly picked among the elements declared here [here](./imports/api/exportsMethods.js) in the urls array
 
 5. Possible errors :
 
 When installing/running meteor, you can have an error with a message like :
 
-> 'Error: incorrect data check
-
+    'Error: incorrect data check
     at Zlib.zlibOnError [as onerror] (zlib.js:187:17)'
 
 Just follow the workaround suggested [here](https://github.com/meteor/meteor/pull/12752/files)
@@ -38,4 +37,5 @@ Just follow the workaround suggested [here](https://github.com/meteor/meteor/pul
 
 - Improve the user interface by using a grid to display exports for example
 - Use a internationalization library to support several languages
-- Add a logging library for both front and back ends.
+- Add a logging management service for both front and back ends.
+- Kill the export update process if any critical error occurs (export is deleted for example)
